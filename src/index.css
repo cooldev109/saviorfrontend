@@ -2,4 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles can be added below */
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --app-background: rgba(252, 248, 242, 1);
+  --body-1-font-family: "Poppins", Helvetica;
+  --body-1-font-size: 12px;
+  --body-1-font-style: normal;
+  --body-1-font-weight: 400;
+  --body-1-letter-spacing: 0.5px;
+  --body-1-line-height: 24px;
+  --button-font-family: "Poppins", Helvetica;
+  --button-font-size: 16px;
+  --button-font-style: normal;
+  --button-font-weight: 700;
+  --button-letter-spacing: 1.25px;
+  --button-line-height: 16px;
+  --darker-gray: rgba(80, 86, 82, 1);
+  --light-100: rgba(255, 255, 255, 1);
+  --sage-9: rgba(138, 145, 142, 1);
+  --text-footer-font-family: "Poppins", Helvetica;
+  --text-footer-font-size: 8px;
+  --text-footer-font-style: normal;
+  --text-footer-font-weight: 400;
+  --text-footer-letter-spacing: 0.25px;
+  --text-footer-line-height: 20px;
+  --verde-claro: rgba(232, 245, 233, 1);
+  --x-1: rgba(249, 254, 253, 1);
+  --x-11: rgba(20, 125, 111, 1);
+  --x-12: rgba(0, 0, 0, 1);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
